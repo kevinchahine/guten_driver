@@ -2,7 +2,8 @@
 
 cmake_minimum_required(VERSION 3.21)
 
-project(guten_driver)
+set(APP_NAME "guten_driver")
+project(${APP_NAME})
 
 set(NOTES
 	notes/termcolor.txt
@@ -27,11 +28,20 @@ set(SRC
 	src/main.cpp
 )
 
-source_group(guten_driver FILES ${NOTES})
-source_group(guten_driver FILES ${SRC})
+source_group(${APP_NAME} FILES ${NOTES})
+source_group(${APP_NAME} FILES ${SRC})
 
-add_executable(guten_driver
+add_executable(${APP_NAME}
 	${NOTES}
 	${SRC}
 )
+
+# --- Libraries ---
+
+# --- guten ---
+
+find_library(LIBRARY_TO_INCLUDE guten)
+message("guten was found as: ${LIBRARY_TO_ADD}")
+target_link_libraries(${APP_NAME} PUBLIC guten)
+target_include_directories(${APP_NAME} PUBLIC guten)
 

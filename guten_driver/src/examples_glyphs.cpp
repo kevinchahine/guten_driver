@@ -1,6 +1,6 @@
 #include "examples_glyphs.h"
 
-#include "../Guten/glyphs/Glyphs.h"
+#include <guten/glyphs/Glyphs.h>
 
 namespace examples
 {

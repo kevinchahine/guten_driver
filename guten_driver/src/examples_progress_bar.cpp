@@ -1,7 +1,7 @@
 #include "examples_progress_bar.h"
 
-#include "../Guten/bars/BlockBar.h"
-#include "../Guten/core/helpers.h"
+#include <guten/bars/BlockBar.h>
+#include <guten/core/helpers.h>
 
 #include <thread>
 #include <chrono>

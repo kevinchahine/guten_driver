@@ -1,6 +1,6 @@
 #include "examples_checker_board.h"
 
-#include "../Guten/guten.hpp"
+#include <guten/guten.hpp>
 
 using namespace std;
 
