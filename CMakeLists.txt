@@ -2,6 +2,6 @@
 
 cmake_minimum_required(VERSION 3.21)
 
-project(guten_driver) 
-
-add_subdirectory(guten_driver)
+project(guten_driver) 				# solution project
+add_subdirectory(guten)				# library project
+add_subdirectory(guten_driver)		# application project

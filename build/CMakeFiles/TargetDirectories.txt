@@ -1,5 +1,0 @@
-/home/kevin/code_dir_link/c++/guten_driver/build/CMakeFiles/edit_cache.dir
-/home/kevin/code_dir_link/c++/guten_driver/build/CMakeFiles/rebuild_cache.dir
-/home/kevin/code_dir_link/c++/guten_driver/build/guten_driver/CMakeFiles/guten_driver.dir
-/home/kevin/code_dir_link/c++/guten_driver/build/guten_driver/CMakeFiles/edit_cache.dir
-/home/kevin/code_dir_link/c++/guten_driver/build/guten_driver/CMakeFiles/rebuild_cache.dir
