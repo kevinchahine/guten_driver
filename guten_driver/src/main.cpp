@@ -10,6 +10,7 @@
 #include "examples_checker_board.h"
 #include "examples_draw_functions.h"
 #include "examples_progress_bar.h"
+
 #include <guten/color/Color.h>
 
 ////#define NOMINMAX	// Prevents pollution of min/max macros from #include "windows.h"
@@ -19,6 +20,15 @@ using namespace std;
 
 int main()
 {	
+	//setlocale(LC_ALL, "en_US.UTF-8");
+
+	string str = "\u265E";
+	cout << "The Knight: " << str << endl;
+
+	//wcout << "\xe2\x99\x94" << endl;
+	str = "\u265A";
+	cout << "The King: " << str << endl;
+
 	cout << termcolor::red << "Hello, "					// 16 colors
 		<< termcolor::color<100> << "Colorful "			// 256 colors
 		<< termcolor::color<211, 54, 130> << "world!"	// true colors
@@ -47,29 +57,36 @@ int main()
 	//examples::Character::test();
 	//examples::bars::progressBar();
 	//examples::bars::blockBar();
-	examples::boards::checkerBoard();
+	//examples::boards::checkerBoard();
 	//examples::color::showAll();
 	//examples::core::matrix();
 	//examples::spinners::flatSpinner();
 	//examples::spinners::lineSpinner();
 	//examples::rectangle();
-	//examples::draw::lines();
+	examples::draw::lines();
 
-	std::cout << termcolor::red << "Hello, ";                   // 16 colors
-	std::cout << termcolor::color<100> << termcolor::blue << "Colorful ";          // 256 colors
+	std::cout << "--- LINES ---" << std::endl;
+	cout << "\u2500" << "\u2502" << endl;
+	str = "\u2500";
+	cout << "str.size = " << str.size() << endl;
+	for (int i = 0; i < str.size(); i++) {
+		cout << str[i] << ' ';
+	}
+	cout << endl;
+	
+	for (int i = 0; i < str.size(); i++) {
+		cout << (int) str[i] << ' ';
+	}
+	cout << endl;
+
+	char arr[3] = { -30, -108, -128 };
+	cout << arr << endl;
+
+	std::cout << termcolor::red << "Hello, ";                   					// 16 colors
+	std::cout << termcolor::color<100> << termcolor::blue << "Colorful ";          	// 256 colors
 	std::cout << termcolor::color<11, 54, 130> << termcolor::yellow << "World!";    // true colors
 	std::cout << std::endl;
 
-	string str = "\u265E";
-	cout << str << endl;
-
-	setlocale(LC_ALL, "en_US.UTF-8");
-	//uint16_t codepoint = 0x265E;
-	//wcout << codepoint << endl;
-	
-	//wcout << "\xe2\x99\x94" << endl;
-	str = "\u265A";
-	cout << str << endl;
 	//this_thread::sleep_for(chrono::seconds(1));
 	//cin.get();
 	return 0;
